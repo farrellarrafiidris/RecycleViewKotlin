@@ -22,8 +22,10 @@ class DetailHeroActivity : AppCompatActivity() {
             .load(data?.image)
             .into(binding.imgProfile)
 
-        binding.tvName.text = data?.name
-        binding.tvDesc.text = data?.description
+        binding.tvName.text     = data?.name
+        binding.tvDesc.text     = data?.description
+        binding.tvRole.text     = data?.role
+        binding.tvGender.text   = data?.gender
 
 //        if (data != null){
 //            Log.d("DATA" ,data.name)

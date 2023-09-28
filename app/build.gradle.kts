@@ -1,3 +1,5 @@
+
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -52,6 +54,10 @@ dependencies {
 
 //    glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+//    CircleAvatar
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+//    SplashScreen
+    implementation ("androidx.core:core-splashscreen:1.0.1")
 
 
 }

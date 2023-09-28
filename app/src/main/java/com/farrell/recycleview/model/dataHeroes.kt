@@ -9,6 +9,8 @@ import kotlinx.parcelize.Parcelize
 data class dataHeroes(
     val name        : String,
     val description : String,
-    val image      : Int,
+    val image       : Int,
+    val role        : String,
+    val gender      : String,
 ):Parcelable
 

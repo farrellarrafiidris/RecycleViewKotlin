@@ -1,7 +1,10 @@
 package com.farrell.recycleview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         val name = resources.getStringArray(R.array.data_name)
         val desc = resources.getStringArray(R.array.data_description)
         val imgs = resources.obtainTypedArray(R.array.data_photo)
+        val role  = resources.getStringArray(R.array.data_role)
+        val gender = resources.getStringArray(R.array.data_gender)
 
         val heroes = ArrayList<dataHeroes>()
 
@@ -49,14 +54,35 @@ class MainActivity : AppCompatActivity() {
             var hero = dataHeroes(
                 name[i],
                 desc[i],
-                imgs.getResourceId(i,-1)
+                imgs.getResourceId(i,-1),
+                role[i],
+                gender[i],
+
             )
             heroes.addAll(listOf(hero))
 
         }
+
         return heroes
 
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId){
+            R.id.about_page -> {
+                val intent = Intent(this,AboutActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

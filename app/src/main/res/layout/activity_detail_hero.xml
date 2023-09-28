@@ -20,28 +20,108 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"/>
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/img_profile"
-        android:text="nama_hero"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+
+
+
+
+        <!--Isi-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/img_profile"
+            android:text="nama_hero"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="8dp"
+
+            android:text="description"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            />
+
+        <!--titleisi-->
+
+    <!--Isi-->
 
     <TextView
-        android:id="@+id/tv_desc"
-        android:layout_width="match_parent"
+        android:id="@+id/title_role"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_name"
-        android:text="description"
+
+        android:paddingStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:lineSpacingMultiplier="1.4"/>
+
+        android:text="@string/role"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toStartOf="@id/guideline1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:text="role"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+
+            android:text="@string/gender"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_role"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"/>
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:text="gender"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_role"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="197dp" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
